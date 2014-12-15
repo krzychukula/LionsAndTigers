@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         myTiger.age = 3
         myTiger.image = UIImage(named: "BengalTiger.jpg")
         
-        myTiger.chuffANumberOfTimes(3)
+        myTiger.chuffANumberOfTimes(3, isLoud: false)
         
         myImageView.image = myTiger.image
         nameLabel.text = myTiger.name

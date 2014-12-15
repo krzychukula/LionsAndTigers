@@ -24,4 +24,14 @@ struct Tiger {
             self.chuff()
         }
     }
+    
+    func chuffANumberOfTimes(numbeerOfTimes: Int, isLoud: Bool){
+        for var chuffTimes = 1; chuffTimes <= numbeerOfTimes; chuffTimes++ {
+            if isLoud {
+                self.chuff()
+            }else{
+                println("Tiger: purr purr")
+            }
+        }
+    }
 }
