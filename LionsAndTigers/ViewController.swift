@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var breedLabel: UILabel!
     
+    var myTigers:[Tiger] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
         myTiger.age = 3
         myTiger.image = UIImage(named: "BengalTiger.jpg")
         
-        println("My tiger's name is: \(myTiger.name), its' age is \(myTiger.age), its' breed is \(myTiger.breed) and its' image is \(myTiger.image)")
+
         
         myImageView.image = myTiger.image
         nameLabel.text = myTiger.name
@@ -50,6 +52,9 @@ class ViewController: UIViewController {
         forthTiger.breed = "Siberian Tiger"
         forthTiger.age = 5
         forthTiger.image = UIImage(named: "SiberianTiger.jpg")
+        
+        myTigers.append(myTiger)
+        myTigers += [secondTiger, thirdTiger, forthTiger]
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,6 +63,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextBarButtonPressed(sender: UIBarButtonItem) {
+        println(myTigers)
     }
 
 }
