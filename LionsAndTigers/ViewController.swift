@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         
         
         UIView.transitionWithView(self.view,
-            duration: 2,
+            duration: 1,
             options: UIViewAnimationOptions.TransitionCrossDissolve,
             animations: {
                 self.myImageView.image = tiger.image
