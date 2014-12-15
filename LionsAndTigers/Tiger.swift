@@ -45,12 +45,13 @@ struct Tiger {
         
         var randomFact:String
         
-        if randomNumber == 0 {
-            randomFact = "The Tiger is the biggest species in the cat family"
-        }else if randomNumber == 1 {
-            randomFact = "Tigers can reach a length of 3.3 meters"
-        }else{
-            randomFact = "A group of tigers is known as an 'ambush' or 'streak'"
+        switch randomNumber {
+            case 0:
+                randomFact = "The Tiger is the biggest species in the cat family"
+            case 1:
+                randomFact = "Tigers can reach a length of 3.3 meters"
+            default:
+                randomFact = "A group of tigers is known as an 'ambush' or 'streak'"
         }
         
         return randomFact
