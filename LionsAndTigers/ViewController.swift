@@ -65,10 +65,11 @@ class ViewController: UIViewController {
 
     @IBAction func nextBarButtonPressed(sender: UIBarButtonItem) {
         
-        var random = Int(arc4random_uniform(UInt32(myTigers.count)))
-        while random == currentIndex {
+        var random:Int
+        do {
             random = Int(arc4random_uniform(UInt32(myTigers.count)))
-        }
+        }while random == currentIndex
+        
         currentIndex = random
         let tiger = myTigers[random]
         
