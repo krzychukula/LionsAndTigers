@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         var random:Int
         do {
             random = Int(arc4random_uniform(UInt32(myTigers.count)))
-        }while random == currentIndex
+        } while random == currentIndex
         
         currentIndex = random
         let tiger = myTigers[random]
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         
         
         UIView.transitionWithView(self.view,
-            duration: 1,
+            duration: 2,
             options: UIViewAnimationOptions.TransitionCrossDissolve,
             animations: {
                 self.myImageView.image = tiger.image
