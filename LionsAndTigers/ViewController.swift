@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         myTiger.age = 3
         myTiger.image = UIImage(named: "BengalTiger.jpg")
         
+        myTiger.age = myTiger.ageInTigerYearsFromAge(myTiger.age)
+        
         myTiger.chuffANumberOfTimes(3, isLoud: false)
         
         myImageView.image = myTiger.image
@@ -42,17 +44,22 @@ class ViewController: UIViewController {
         secondTiger.age = 2
         secondTiger.image = UIImage(named: "IndochineseTiger.jpg")
         
+        secondTiger.age = secondTiger.ageInTigerYearsFromAge(secondTiger.age)
+        
         var thirdTiger = Tiger()
         thirdTiger.name = "Jacob"
         thirdTiger.breed = "Malayan Tiger"
         thirdTiger.age = 4
         thirdTiger.image = UIImage(named: "MalayanTiger.jpg")
         
+        thirdTiger.age = thirdTiger.ageInTigerYearsFromAge(thirdTiger.age)
+        
         var forthTiger = Tiger()
         forthTiger.name = "Spar"
         forthTiger.breed = "Siberian Tiger"
         forthTiger.age = 5
         forthTiger.image = UIImage(named: "SiberianTiger.jpg")
+        forthTiger.age = forthTiger.ageInTigerYearsFromAge(forthTiger.age)
         
         myTigers.append(myTiger)
         myTigers += [secondTiger, thirdTiger, forthTiger]
