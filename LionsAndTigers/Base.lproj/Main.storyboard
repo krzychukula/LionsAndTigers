@@ -44,7 +44,7 @@
                                 <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="331" width="348" height="21"/>
+                                    <rect key="frame" x="16" y="242" width="348" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="breed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-FZ-qpQ">
@@ -55,7 +55,7 @@
                                 <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="389" width="348" height="21"/>
+                                    <rect key="frame" x="16" y="300" width="348" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAK-Yb-x8C">
@@ -66,7 +66,18 @@
                                 <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="360" width="348" height="21"/>
+                                    <rect key="frame" x="16" y="271" width="348" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="random Fact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etR-I3-AgO">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="329" width="348" height="86"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -78,6 +89,7 @@
                                 <exclude reference="ug1-H7-OrJ"/>
                                 <exclude reference="wdp-FZ-qpQ"/>
                                 <exclude reference="IAK-Yb-x8C"/>
+                                <exclude reference="etR-I3-AgO"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -87,6 +99,7 @@
                                 <include reference="ug1-H7-OrJ"/>
                                 <include reference="wdp-FZ-qpQ"/>
                                 <include reference="IAK-Yb-x8C"/>
+                                <include reference="etR-I3-AgO"/>
                             </mask>
                         </variation>
                     </view>
@@ -95,6 +108,7 @@
                         <outlet property="breedLabel" destination="wdp-FZ-qpQ" id="YwW-ru-9Tv"/>
                         <outlet property="myImageView" destination="kvr-qh-RLh" id="7YU-1N-Xrp"/>
                         <outlet property="nameLabel" destination="ug1-H7-OrJ" id="PkR-Df-w7t"/>
+                        <outlet property="randomFactLabel" destination="etR-I3-AgO" id="cXD-po-Aso"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
