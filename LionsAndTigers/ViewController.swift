@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     var myTigers:[Tiger] = []
     var currentIndex = 0
     
+    var lions:[Lion] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +81,8 @@ class ViewController: UIViewController {
         lioness.image = UIImage(named: "Lioness.jpeg")
         lioness.name = "Serabi"
         lioness.subspecies = "Barbary"
+        
+        self.lions += [lion, lioness]
     }
 
     override func didReceiveMemoryWarning() {
