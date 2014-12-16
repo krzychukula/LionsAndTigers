@@ -132,16 +132,16 @@ class ViewController: UIViewController {
                     self.breedLabel.text = tiger.breed
                     self.ageLabel.text = "\(tiger.age)"
                     self.randomFactLabel.text = tiger.randomFact()
-                    self.randomFactLabel.hidden = false
+                    
                 }else if self.currentAnimal.species == "Lion" {
                     let lion = self.lions[self.currentAnimal.index]
                     self.myImageView.image = lion.image
                     self.breedLabel.text = lion.subspecies
                     self.ageLabel.text = "\(lion.age)"
-                    self.randomFactLabel.hidden = true
+                    self.randomFactLabel.text = lion.randomFact()
                 }
                 
-                
+                self.randomFactLabel.hidden = false
                 
             }, {
                 (finished: Bool) -> () in
