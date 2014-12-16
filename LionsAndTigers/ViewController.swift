@@ -65,6 +65,20 @@ class ViewController: UIViewController {
         
         myTigers.append(myTiger)
         myTigers += [secondTiger, thirdTiger, forthTiger]
+        
+        var lion = Lion()
+        lion.age = 4
+        lion.isAlphaMale = false
+        lion.image = UIImage(named: "Lion.jpg")
+        lion.name = "Mufasa"
+        lion.subspecies = "West African"
+        
+        var lioness = Lion()
+        lioness.age = 3
+        lioness.isAlphaMale = false
+        lioness.image = UIImage(named: "Lioness.jpeg")
+        lioness.name = "Serabi"
+        lioness.subspecies = "Barbary"
     }
 
     override func didReceiveMemoryWarning() {
