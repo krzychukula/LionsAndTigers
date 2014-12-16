@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     var myTigers:[Tiger] = []
     var currentIndex = 0
     
+    var currentAnimal = (species: "Tiger", index: 0)
+    
     var lions:[Lion] = []
     
     
@@ -115,6 +117,18 @@ class ViewController: UIViewController {
                 (finished: Bool) -> () in
         })
         
+        
+    }
+    
+    func updateAnimal(){
+        switch currentAnimal {
+        case ("Tiger", _):
+            let randomIndex = Int(arc4random_uniform(UInt32(lions.count)))
+            currentAnimal = ("Lion", randomIndex)
+        default:
+            let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+            currentAnimal = ("Tiger", randomIndex)
+        }
         
     }
 
