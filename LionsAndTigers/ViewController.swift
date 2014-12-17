@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     
     var lions:[Lion] = []
     
+    var lionCubs:[LionCub] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +104,15 @@ class ViewController: UIViewController {
         
         lionCub.roar()
         lionCub.rubLionCubsBelly()
+        
+        var femaleLionCub = LionCub()
+        femaleLionCub.age = 1
+        femaleLionCub.name = "Nala"
+        femaleLionCub.image = UIImage(named: "LionCub2.jpeg")
+        femaleLionCub.subspecies = "Transvall"
+        femaleLionCub.isAlphaMale = false
+        
+        self.lionCubs += [lionCub, femaleLionCub]
     }
 
     override func didReceiveMemoryWarning() {
