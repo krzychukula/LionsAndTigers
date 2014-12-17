@@ -133,6 +133,9 @@ class ViewController: UIViewController {
         case ("Tiger", _):
             let randomIndex = Int(arc4random_uniform(UInt32(lions.count)))
             currentAnimal = ("Lion", randomIndex)
+        case ("Lion", _):
+            let randomIndex = Int(arc4random_uniform(UInt32(lionCubs.count)))
+            currentAnimal = ("LionCub", randomIndex)
         default:
             let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
             currentAnimal = ("Tiger", randomIndex)
@@ -143,12 +146,13 @@ class ViewController: UIViewController {
     func updateView(){
         
         UIView.transitionWithView(self.view,
-            duration: 2,
+            duration: 1,
             options: UIViewAnimationOptions.TransitionCrossDissolve,
             animations: {
                 
                 if self.currentAnimal.species == "Tiger" {
                     let tiger = self.myTigers[self.currentAnimal.index]
+                    self.nameLabel.text = tiger.name
                     self.myImageView.image = tiger.image
                     self.breedLabel.text = tiger.breed
                     self.ageLabel.text = "\(tiger.age)"
@@ -156,10 +160,18 @@ class ViewController: UIViewController {
                     
                 }else if self.currentAnimal.species == "Lion" {
                     let lion = self.lions[self.currentAnimal.index]
+                    self.nameLabel.text = lion.name
                     self.myImageView.image = lion.image
                     self.breedLabel.text = lion.subspecies
                     self.ageLabel.text = "\(lion.age)"
                     self.randomFactLabel.text = lion.randomFact()
+                }else if self.currentAnimal.species == "LionCub" {
+                    let cub = self.lionCubs[self.currentAnimal.index]
+                    self.nameLabel.text = cub.name
+                    self.myImageView.image = cub.image
+                    self.breedLabel.text = cub.subspecies
+                    self.ageLabel.text = "\(cub.age)"
+                    self.randomFactLabel.text = cub.randomFact()
                 }
                 
                 self.randomFactLabel.hidden = false
