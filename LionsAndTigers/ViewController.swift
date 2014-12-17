@@ -101,6 +101,7 @@ class ViewController: UIViewController {
         lionCub.subspecies = "Masai"
         
         lionCub.roar()
+        lionCub.rubLionCubsBelly()
     }
 
     override func didReceiveMemoryWarning() {
